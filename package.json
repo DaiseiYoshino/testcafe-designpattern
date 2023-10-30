@@ -4,7 +4,7 @@
   "description": "testing test patterns with testcafe",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pageobject": "testcafe chrome pageobject/test.ts"
   },
   "author": "Daisei Yoshino",
   "license": "ISC",
