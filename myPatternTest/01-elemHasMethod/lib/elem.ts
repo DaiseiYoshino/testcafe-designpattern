@@ -47,10 +47,10 @@ export class ElemList<E extends BaseElem>{
   }
 
   nth(nth: number): E {
-    return <E>new BaseElem(this.t, this.selector.nth(nth));
+    return <E>new this.elemClass(this.t, this.selector.nth(nth));
   }
 
   withText(text: string): E {
-    return <E>new BaseElem(this.t, this.selector.withText(text));
+    return <E>new this.elemClass(this.t, this.selector.withText(text));
   }
 }
