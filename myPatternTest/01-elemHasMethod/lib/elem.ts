@@ -38,10 +38,12 @@ export class InputElem extends BaseElem {
 export class ElemList<E extends BaseElem>{
   protected t: TestController;
   public selector: Selector;
+  protected elemClass: new (t: TestController, selector: Selector) => E
 
-  constructor(t: TestController, selector: Selector) {
+  constructor(t: TestController, selector: Selector, elemClass: new (t: TestController, selector: Selector) => E) {
     this.t = t;
     this.selector = selector;
+    this.elemClass = elemClass;
   }
 
   nth(nth: number): E {
