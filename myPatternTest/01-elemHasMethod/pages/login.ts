@@ -1,4 +1,3 @@
-import {BaseElem, InputElem} from '../lib/elem';
 import {Selector} from 'testcafe';
 import {BasePage} from '../lib/page';
 

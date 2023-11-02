@@ -1,5 +1,4 @@
 import {Selector} from 'testcafe';
-import {BaseElem} from '../lib/elem';
 import {BasePage} from '../lib/page';
 
 export class TopPage extends BasePage {
