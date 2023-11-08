@@ -10,9 +10,9 @@ export class TestFacade {
   
   constructor(t: TestController) {
     this.t = t;
-    this.TopPage = new TopPage(t);
-    this.LoginPage = new LoginPage(t);
-    this.MyPage = new MyPage(t);
+    this.TopPage = new TopPage(this.t);
+    this.LoginPage = new LoginPage(this.t);
+    this.MyPage = new MyPage(this.t);
   }
 
   async goToLoginPage() {
