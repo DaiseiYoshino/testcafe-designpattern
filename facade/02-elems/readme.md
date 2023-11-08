@@ -18,7 +18,27 @@ async clickExampleButton() {
 変数の責任範囲が狭まるというメリットはある。
 しかし、複数のメソッドで、同一の要素を使用する可能性がある。その場合、その要素の定義を変更する際、複数箇所のコード変更が必要になり、保守性が下がりかねない。
 
-## 要素定義をObjectにまとめる
+## 要素定義を外部Classのパラメータにまとめる
+
+```typescript
+class SomePageElems {
+  public anInput: Selector;
+  public anotherInput: Selector;
+  public otherInput: Selector;
+  public submitButton: Selector;
+  constructor() {
+    this.anInput = Selector('input#aninput');
+    this.anotherInput = Selector('input#anotherinput');
+    this.otherInput = Selector('input#other');
+    this.submitButton = Selector('button#submit');
+  }
+}
+```
+
+TypeScriptの場合、classのパラメータの実体を定義するのとは別に、型の定義も行わなければならない。
+上記のような形式だと、単なるobjectに対するclassの優位性が特になく、記述だけ煩雑になっているように思える……
+
+## 要素定義を外部Objectにまとめる
 
 ```typescript
 function goods(nth: number) {
